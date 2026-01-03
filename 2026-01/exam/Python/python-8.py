@@ -94,12 +94,12 @@ while True:
 
 
 def copy_file(src_path, dst_path):
-    # 1. 원본 파일 존재 여부 확인
+    #원본 파일 존재 여부 확인
     if not os.path.exists(src_path):
         print(f"에러: 원본 파일 '{src_path}'을(를) 찾을 수 없습니다.")
         return
 
-        # 2. 바이너리 모드로 읽기(rb) 및 쓰기(wb)
+        # 바이너리 모드로 읽기(rb) 및 쓰기(wb)
     with open(src_path, 'rb') as src, open(dst_path, 'wb') as dst:
         chunk_size = 4096  # 4KB 단위로 처리
 
@@ -109,7 +109,7 @@ def copy_file(src_path, dst_path):
                 break
             dst.write(chunk)
 
-        # 3. 파일 크기 비교 및 결과 출력
+        # 파일 크기 비교 및 결과 출력
         src_size = os.path.getsize(src_path)
         dst_size = os.path.getsize(dst_path)
 
@@ -123,6 +123,6 @@ def copy_file(src_path, dst_path):
             print("결과: 파일 크기가 다릅니다. 복사 과정을 확인하세요.")
 
 
-# 테스트 실행
+
 copy_file("origin.jpg", "backup.jpg")  # 바이너리 파일 예시
 copy_file("test.txt", "test_copy.txt")  # 텍스트 파일 예시
