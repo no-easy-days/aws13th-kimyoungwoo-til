@@ -1,5 +1,4 @@
 #학생 정보를 관리하는 Student 클래스를 만드세요.
-import dataclasses
 from dataclasses import dataclass
 
 
