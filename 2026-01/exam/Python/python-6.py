@@ -15,20 +15,21 @@ class Student:
 kim = Student("김철수","2024001",1)
 kim.introduce()
 
-#은행 계좌를 관리하는 BankAccount 클래스를 만드세요.
+# 은행 계좌를 관리하는 BankAccount 클래스를 만드세요.
 class BackAccount:
-    def __init__(self,owner):
+    def __init__(self, owner):
         self.owner = owner
         self.balance = 0
 
-    def deposit(self,amount):
+    def deposit(self, amount):
         self.balance += amount
-        
-    def withdraw(self,amount):
+
+    def withdraw(self, amount):
         if self.balance < amount:
             print("잔액이 부족합니다")
+            return
         self.balance -= amount
-    
+
     def get_balance(self):
         return self.balance
 
