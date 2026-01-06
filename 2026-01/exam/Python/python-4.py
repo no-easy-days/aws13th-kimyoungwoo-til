@@ -12,7 +12,7 @@ def calculator(a,b,operator):
         else:
             return a/b
     else:
-        return "지원하지 않는 연사자 입니다."
+        return "지원하지 않는 연산자 입니다."
 
 print(calculator(10, 5, '+'))  # 15
 print(calculator(10, 5, '-'))  # 5
