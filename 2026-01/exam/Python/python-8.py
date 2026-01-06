@@ -1,8 +1,6 @@
 import os
 import datetime
 
-
-
 def save_txt(filename):
     with open(filename,"w",encoding="utf-8") as f:
         f.write("안녕하세롱zzz\n")
@@ -12,7 +10,7 @@ def save_txt(filename):
 
 def load_txt(filename):
     with open(filename,"r",encoding="utf-8") as f:
-        lines = f.readline()
+        lines = f.readlines()
     total_lines = len(lines)
     total_words = 0
     total_chars = 0
