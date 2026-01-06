@@ -23,10 +23,12 @@ class BackAccount:
 
     def deposit(self,amount):
         self.balance += amount
+        
     def withdraw(self,amount):
         if self.balance < amount:
             print("잔액이 부족합니다")
         self.balance -= amount
+    
     def get_balance(self):
         return self.balance
 
