@@ -8,13 +8,21 @@ with open("users.csv","r",encoding="utf-8") as f:
     for row in reader:
         print(f"{row[0]} - {row[3]}")
 
-#문제 2: CSV 필터링
+# #문제 2: CSV 필터링 문제의 코드
+# with open("users.csv","r",encoding="utf-8") as f:
+#     reader = csv.reader(f)
+#     header = next(reader)
+#     for row in reader:
+#         if int(row[1]) >= 30:
+#             print(f"{row[0]} - {row[1]}세")
+
+import csv
+#DictReader로 변경
 with open("users.csv","r",encoding="utf-8") as f:
-    reader = csv.reader(f)
-    header = next(reader)
+    reader = csv.DictReader(f)
     for row in reader:
-        if int(row[1]) >= 30:
-            print(f"{row[0]} - {row[1]}세")
+        if int(row["나이"]) >= 30:
+            print(f"{row["이름"]} - {row["나이"]}세")
 
 students = [
     {'학번': 'S001', '이름': '김민수', '학과': '컴퓨터공학'},
