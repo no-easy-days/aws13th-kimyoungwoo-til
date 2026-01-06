@@ -26,5 +26,5 @@ products = [
     {"name": "모니터", "discount": 10}
 ]
 
-discounted = list(filter(lambda x: x["discount"] > 20,products))
+discounted = list(filter(lambda x: x["discount"] >= 20,products))
 print(discounted)
