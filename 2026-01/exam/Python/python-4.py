@@ -24,19 +24,9 @@ print(calculator(10, 5, '%'))  # 지원하지 않는 연산자입니다
 #문제: 학생 이름과 점수 리스트를 받아 성적표를 출력하는 함수를 만드세요.
 
 def print_report(name, scores):
-    temp_avg = 0
-    for i in range(scores.__len__()):
-        temp_avg += scores[i]
-    temp_avg /= scores.__len__()
-
-    temp_max = 0
-    for i in range(scores.__len__()):
-        if scores[i] > temp_max:
-            temp_max = scores[i]
-    temp_min = temp_max
-    for i in range(scores.__len__()):
-        if scores[i] < temp_min:
-            temp_min = scores[i]
+    temp_avg = sum(scores)/len(scores)
+    temp_max = max(scores)
+    temp_min = min(scores)
 
     grade = ""
     if temp_avg > 90:
