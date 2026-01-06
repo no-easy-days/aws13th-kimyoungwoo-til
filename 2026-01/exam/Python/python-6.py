@@ -25,6 +25,7 @@ class BackAccount:
 
     def withdraw(self, amount):
         if self.balance < amount:
+            #문제의 코드 return을 하지 않음
             print("잔액이 부족합니다")
             return
         self.balance -= amount
