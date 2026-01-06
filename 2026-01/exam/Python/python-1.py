@@ -54,7 +54,7 @@ elif operator == "-":
 elif operator == "*":
     print(num1*num2)
 elif operator == "/":
-    if(num1 == 0 or num2 == 0):
+    if num2 == 0:
         print("0으로 나눌 수 없습니다.")
     else:
         print(num1/num2)
