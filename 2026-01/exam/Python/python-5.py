@@ -2,6 +2,12 @@
 #사용자로부터 이메일 주소를 입력받아 사용자 이름과 도메인을 분리하여 출력하세요.
 #입력 예시: jeff@example.com
 
+email = input("이메일을 입력하세요: ")
+username, domain = email.split("@")
+
+print("사용자 이름:", username)
+print("도메인:", domain)
+
 #문제
 #비밀번호가 8자 이상인지 확인하는 프로그램을 작성하세요.
 #조건: 길이가 8자 이상이면 "✅ 유효한 비밀번호입니다." 출력
