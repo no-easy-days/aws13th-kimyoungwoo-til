@@ -14,7 +14,8 @@ for p in sorted_cities:
 #문제: 문자열 리스트를 정수 리스트로 변환하고, 각 숫자에 100을 더하세요.
 
 str_numbers = ["10", "20", "30", "40", "50"]
-int_numbers = list(map(lambda x: x +100, map(int, str_numbers)))
+#int_numbers = list(map(lambda x: x +100, map(int, str_numbers)))
+int_numbres = str_numbres[int(x) + 100 for i in str_numbers]
 print(int_numbers)
 
 #문제: 할인율이 20% 이상인 상품만 추출하세요.
@@ -25,5 +26,5 @@ products = [
     {"name": "모니터", "discount": 10}
 ]
 
-discounted = list(filter(lambda x: x["discount"] >20,products))
+discounted = list(filter(lambda x: x["discount"] > 20,products))
 print(discounted)
