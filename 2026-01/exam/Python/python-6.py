@@ -45,10 +45,13 @@ account.withdraw(10000)  # 잔액이 부족합니다
 class TodoList:
     def __init__(self):
         self.tasks = []
+        
     def add_task(self,task):
         self.tasks.append(task)
+        
     def complete_task(self,task):
         self.tasks.remove(task)
+        
     def show_tasks(self):
         for task in self.tasks:
             print(task)
